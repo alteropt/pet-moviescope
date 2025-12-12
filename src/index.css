@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+
+:root {
+	--background-color: 210 11% 4%;
+	--text-color: 0 0% 100%;
+	--accent-color: 357 75% 49%;
+	--secondary-color:  180, 0.51%, 61.37%;
+}
+
+body {
+	font-family: 'Mulish', sans-serif;
+	background-color: hsl(var(--background-color));
+	color: hsl(var(--text-color));
+}
