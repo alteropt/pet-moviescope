@@ -1,5 +1,5 @@
 import logo from '../assets/logo.png'
-import { sidebarLinksData } from '../data/navLinks.data'
+import { sidebarLinksData } from '../data/navlinks.data'
 
 const Sidebar = () => {
 	return (
