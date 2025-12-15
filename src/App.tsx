@@ -1,11 +1,12 @@
+import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 
 const App = () => {
 	return (
 		<>
-      <main>
-        <Sidebar/>
-      </main>
+			<Header />
+			<Sidebar />
+			<main></main>
 		</>
 	)
 }

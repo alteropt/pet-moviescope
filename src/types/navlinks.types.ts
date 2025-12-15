@@ -1,6 +1,6 @@
 import type React from 'react'
 
-export type sibebarLink = {
+export type sidebarLink = {
 	name: string
 	icon: React.ReactNode
 	link: string
@@ -8,5 +8,10 @@ export type sibebarLink = {
 
 export type sidebarLinks = {
 	name: string
-	links: sibebarLink[]
+	links: sidebarLink[]
+}[]
+
+export type headerLinks = {
+	name: string
+	link: string
 }[]

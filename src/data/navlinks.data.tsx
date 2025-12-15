@@ -1,7 +1,17 @@
-import { Calendar, CircleStop, Clock12, Heart, House, LogOut, MoonStar, Settings, User } from 'lucide-react'
-import type { sidebarLinks } from '../types/sidebar.types'
+import {
+	Calendar,
+	CircleStop,
+	Clock12,
+	Heart,
+	House,
+	LogOut,
+	MoonStar,
+	Settings,
+	User,
+} from 'lucide-react'
+import type { headerLinks, sidebarLinks } from '../types/navlinks.types'
 
-export const sidebarData: sidebarLinks = [
+export const sidebarLinksData: sidebarLinks = [
 	{
 		name: 'Menu',
 		links: [
@@ -61,5 +71,20 @@ export const sidebarData: sidebarLinks = [
 				icon: <LogOut />,
 			},
 		],
+	},
+]
+
+export const headerLinksData: headerLinks = [
+	{
+		name: 'TV Show',
+		link: '/tv-show',
+	},
+	{
+		name: 'Movies',
+		link: '/movies',
+	},
+	{
+		name: 'Animes',
+		link: '/animes',
 	},
 ]
