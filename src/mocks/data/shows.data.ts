@@ -28,7 +28,7 @@ export const shows: Show[] = [
 	{
 		id: 4,
 		title: 'Bridgerton',
-		rating: 7.3,
+		rating: 6.7,
 		poster: '/posters/bridgerton.jpg',
 		isComingSoon: false,
 		isTrending: false,
@@ -68,7 +68,7 @@ export const shows: Show[] = [
 	{
 		id: 9,
 		title: 'Shadow and Bone',
-		rating: 7.5,
+		rating: 6.8,
 		poster: '/posters/shadow-and-bone.jpg',
 		isComingSoon: false,
 		isTrending: true,
@@ -92,7 +92,7 @@ export const shows: Show[] = [
 	{
 		id: 12,
 		title: 'Vikings: Valhalla',
-		rating: 7.2,
+		rating: 4.9,
 		poster: '/posters/vikings.jpg',
 		isComingSoon: true,
 		isTrending: false,
@@ -148,7 +148,7 @@ export const shows: Show[] = [
 	{
 		id: 19,
 		title: '1899',
-		rating: 7.0,
+		rating: 6.8,
 		poster: '/posters/1899.jpg',
 		isComingSoon: true,
 		isTrending: false,
@@ -156,7 +156,7 @@ export const shows: Show[] = [
 	{
 		id: 20,
 		title: 'Arcane',
-		rating: 9.0,
+		rating: 6.0,
 		poster: '/posters/arcane.jpg',
 		isComingSoon: false,
 		isTrending: true,
