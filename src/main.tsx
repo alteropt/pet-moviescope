@@ -4,9 +4,13 @@ import App from './App.tsx'
 import './index.css'
 import { enableMocking } from './services/showsApiMocking.services.ts'
 
-enableMocking()
-createRoot(document.getElementById('root')!).render(
-	<StrictMode>
-		<App />
-	</StrictMode>
-)
+async function main() {
+	await enableMocking()
+	createRoot(document.getElementById('root')!).render(
+		<StrictMode>
+			<App />
+		</StrictMode>
+	)
+}
+
+main()
