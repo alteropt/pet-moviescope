@@ -1,22 +1,26 @@
 import Header from './components/Header/Header'
-import ShowCard from './components/ShowCard'
+import ShowsCategorySection from './components/ShowsCategorySection'
 import Sidebar from './components/Sidebar/Sidebar'
-import { useShows } from './hooks/useShows'
+import { useComingSoonShows, useTrendingShows } from './hooks/useShows'
 
 const App = () => {
-	const { data } = useShows()
+	const { data: trendingShows } = useTrendingShows()
+	const { data: comingSoonShows } = useComingSoonShows()
 	return (
 		<div className='min-h-screen flex'>
 			<Sidebar />
 
-			<div className='flex-1 flex flex-col'>
+			<div className='flex-1 flex flex-col overflow-hidden'>
 				<Header />
-				<main className='px-12 py-6'>
-					<div className='flex flex-wrap gap-8'>
-						{data?.map(show => (
-							<ShowCard key={show.id} show={show} />
-						))}
-					</div>
+				<main className='px-12 py-6 flex-1 space-y-12'>
+					<ShowsCategorySection
+						showsCategory='Trending'
+						shows={trendingShows}
+					/>
+					<ShowsCategorySection
+						showsCategory='Coming Soon'
+						shows={comingSoonShows}
+					/>
 				</main>
 			</div>
 		</div>

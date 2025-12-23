@@ -6,9 +6,11 @@ export const getAllShows = async (): Promise<Show[]> => {
 	return res.json()
 }
 
-export const getShow = async (id: number): Promise<Show | undefined> => {
+export const getShow = async (id: number): Promise<Show> => {
 	const res = await fetch(`/api/shows/${id}`)
-	if (!res.ok) return undefined
+	if (!res.ok) {
+		throw new Error('Failed to fetch show')
+	}
 	return res.json()
 }
 
