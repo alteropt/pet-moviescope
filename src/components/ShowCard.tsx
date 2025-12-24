@@ -1,10 +1,11 @@
+import { Link } from 'react-router'
 import type { Show } from '../types/show.types'
 import { getRatingClass } from '../utils/getRatingClass'
 
 const ShowCard = ({ show }: { show: Show }) => {
 	return (
-		<a
-			href={`/shows/${show.id}`}
+		<Link
+			to={`/shows/${show.id}`}
 			key={show.id}
 			className='shrink-0 w-40 sm:w-45 lg:w-50 relative group'
 		>
@@ -22,7 +23,7 @@ const ShowCard = ({ show }: { show: Show }) => {
 					{show.rating.toFixed(1)}
 				</span>
 			</div>
-		</a>
+		</Link>
 	)
 }
 

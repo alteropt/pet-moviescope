@@ -9,7 +9,9 @@ interface IProps {
 const ShowsCategorySection = ({ shows, showsCategory }: IProps) => {
 	return (
 		<section className='relative'>
-			<h2 className='font-bold text-2xl mb-4'>{showsCategory}</h2>
+			<h2 className='font-bold text-2xl mb-4'>
+				<a href='/'>{showsCategory}</a>
+			</h2>
 			<ShowsCategorySwiper shows={shows} />
 		</section>
 	)

@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import { headerLinksData } from '../../data/navlinks.data'
 
 const HeaderLinksList = () => {
@@ -9,9 +10,9 @@ const HeaderLinksList = () => {
 						className='text-(--secondary-color) hover:text-(--text-color) transition-all duration-300 w-max font-semibold'
 						key={link.name}
 					>
-						<a href={link.link} key={link.link}>
+						<Link to={link.link} key={link.link}>
 							{link.name}
-						</a>
+						</Link>
 					</li>
 				)
 			})}
