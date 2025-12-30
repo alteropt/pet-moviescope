@@ -7,7 +7,7 @@ const ShowCard = ({ show }: { show: Show }) => {
 		<Link
 			to={`/shows/${show.id}`}
 			key={show.id}
-			className='shrink-0 w-40 sm:w-45 lg:w-50 relative group'
+			className='shrink-0 w-40 sm:w-45 lg:w-50 relative group overflow-hidden rounded-xl'
 		>
 			<img
 				src={show.poster}

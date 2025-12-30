@@ -14,6 +14,7 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: false,
         isTrending: true,
+        description: 'A group of kids uncovers dark government secrets and supernatural forces after their friend mysteriously disappears.',
     },
     {
         id: 2,
@@ -28,6 +29,7 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: false,
         isTrending: true,
+        description: 'A monster hunter struggles to find his place in a world where people can be more wicked than the beasts he hunts.',
     },
     {
         id: 3,
@@ -42,6 +44,7 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: false,
         isTrending: true,
+        description: 'A criminal mastermind leads a group of skilled thieves in an ambitious plan to pull off the biggest heist in history.',
     },
     {
         id: 4,
@@ -56,6 +59,7 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: false,
         isTrending: false,
+        description: 'High society, forbidden romance, and scandal collide in this lavish tale set in Regency-era London.',
     },
     {
         id: 5,
@@ -70,6 +74,7 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: false,
         isTrending: false,
+        description: 'A dramatic look at the reign of Queen Elizabeth II and the political and personal challenges she faces.',
     },
     {
         id: 6,
@@ -84,6 +89,7 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: false,
         isTrending: true,
+        description: 'Hundreds of desperate contestants compete in deadly children’s games for a life-changing cash prize.',
     },
     {
         id: 7,
@@ -98,6 +104,7 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: true,
         isTrending: false,
+        description: 'The Lord of Dreams escapes captivity and sets out to restore order to his realm and the waking world.',
     },
     {
         id: 8,
@@ -112,6 +119,7 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: false,
         isTrending: true,
+        description: 'A financial advisor drags his family into a dangerous world of crime after a money-laundering scheme goes wrong.',
     },
     {
         id: 9,
@@ -126,6 +134,7 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: false,
         isTrending: true,
+        description: 'A young soldier discovers a magical power that could unite her war-torn world — if she survives long enough.',
     },
     {
         id: 10,
@@ -140,6 +149,7 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: false,
         isTrending: false,
+        description: 'An ambitious marketer from Chicago moves to Paris, navigating work, love, and cultural clashes.',
     },
     {
         id: 11,
@@ -154,6 +164,7 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: false,
         isTrending: true,
+        description: 'A charming bookstore manager becomes dangerously obsessed with the women he falls for.',
     },
     {
         id: 12,
@@ -168,6 +179,7 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: true,
         isTrending: false,
+        description: 'Legendary Viking heroes rise to power as Europe undergoes violent change and shifting alliances.',
     },
     {
         id: 13,
@@ -182,6 +194,7 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: false,
         isTrending: true,
+        description: 'A dysfunctional family of adopted superheroes reunites to solve the mystery of their father’s death.',
     },
     {
         id: 14,
@@ -196,6 +209,7 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: false,
         isTrending: true,
+        description: 'A bold anthology of animated stories exploring futuristic worlds, dark humor, and mind-bending concepts.',
     },
     {
         id: 15,
@@ -210,6 +224,7 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: false,
         isTrending: true,
+        description: 'Decades after their rivalry, Johnny and Daniel face off again — this time as senseis.',
     },
     {
         id: 16,
@@ -224,6 +239,7 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: false,
         isTrending: true,
+        description: 'A chess prodigy rises to global fame while battling addiction, loneliness, and the pressures of genius.',
     },
     {
         id: 17,
@@ -238,6 +254,7 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: false,
         isTrending: true,
+        description: 'Wednesday Addams investigates a series of supernatural mysteries at her strange new school.',
     },
     {
         id: 18,
@@ -252,6 +269,7 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: true,
         isTrending: false,
+        description: 'A teenage girl and her unpredictable mother try to build a new life while hiding old secrets.',
     },
     {
         id: 19,
@@ -266,6 +284,7 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: true,
         isTrending: false,
+        description: 'Passengers on a migrant ship encounter a terrifying mystery that defies logic and reality.',
     },
     {
         id: 20,
@@ -280,5 +299,6 @@ export const shows: Show[] = [
         isFavorite: false,
         isComingSoon: false,
         isTrending: true,
+        description: 'Two sisters find themselves on opposite sides of a rising conflict in the steampunk world of Piltover and Zaun.',
     },
 ]

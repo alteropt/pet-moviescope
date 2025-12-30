@@ -1,5 +1,6 @@
 import type { Show } from '../types/show.types'
 import ShowsCategorySwiper from './ShowsCategorySwiper'
+import H2 from './UI/H2'
 
 interface IProps {
 	shows: Show[] | undefined
@@ -9,9 +10,9 @@ interface IProps {
 const ShowsCategorySection = ({ shows, showsCategory }: IProps) => {
 	return (
 		<section className='relative'>
-			<h2 className='font-bold text-2xl mb-4'>
-				<a href='/'>{showsCategory}</a>
-			</h2>
+			<H2>
+				{showsCategory}
+			</H2>
 			<ShowsCategorySwiper shows={shows} />
 		</section>
 	)

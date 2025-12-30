@@ -1,17 +1,20 @@
+import { Check, Plus } from 'lucide-react'
 import { useParams } from 'react-router'
-import { useShow } from '../hooks/useShows'
+import { useShow, useToggleFavorite } from '../hooks/useShows'
+import { getRatingClass } from '../utils/getRatingClass'
 
 const ShowPage = () => {
 	const { id } = useParams()
-	const { data: show, isLoading, error } = useShow(Number(id))
+	const { data: show, isLoading } = useShow(Number(id))
+
+	const toggleShowFavorite = useToggleFavorite()
 
 	if (!id) return <div>Invalid show id</div>
 	if (isLoading) return <div>Loading...</div>
-	if (error) return <div>Error: {error.message}</div>
 	if (!show) return <div>Show is Not Found</div>
 
 	return (
-		<div className='relative h-screen w-full overflow-hidden'>
+		<div className='relative h-screen w-full overflow-hidden flex items-center'>
 			<video
 				className='absolute inset-0 h-full w-full object-contain pointer-events-none filter blur-xs'
 				autoPlay
@@ -24,15 +27,49 @@ const ShowPage = () => {
 			</video>
 
 			<div className='absolute inset-0 bg-black/50' />
-
 			<div className='relative z-10 text-white p-10'>
-				<h1 className='text-4xl font-bold'>{show.title}</h1>
-				<p className='mt-4 max-w-xl'>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam,
-					distinctio fuga! Dolores iste tempore ducimus ipsam, quam eos
-					voluptates quo dolorem pariatur tempora voluptate eveniet et maxime
-					libero, illo eum?
-				</p>
+				<div className='flex items-center gap-2'>
+					<h1 className='text-4xl font-bold'>{show.title}</h1>
+					<span
+						className={`block font-medium ${getRatingClass(show.rating)} p-0.5`}
+					>
+						{show.rating.toFixed(1)}
+					</span>
+				</div>
+				<p className='my-4 max-w-xl'>{show.description}</p>
+
+				<div>
+					<p>
+						<span className='font-bold'>Genre:</span> {show.genres.join(', ')}
+					</p>
+					<p>
+						<span className='font-bold'>Release Date:</span> {show.releaseYear}
+					</p>
+					<p>
+						<span className='font-bold'>Created by:</span>{' '}
+						{show.creators.join(', ')}
+					</p>
+				</div>
+
+				<div className='mt-8 flex gap-4'>
+					<button className='flex items-center gap-2 border border-(--text-color) cursor-pointer px-4 py-2 rounded-md'>
+						Watch Now
+					</button>
+					<button
+						className='flex items-center gap-2 border border-(--text-color) cursor-pointer px-4 py-2 rounded-md'
+						onClick={() => toggleShowFavorite.mutate(show.id)}
+					>
+						{show.isFavorite ? (
+							<>
+								In Favorites <Check />
+							</>
+						) : (
+							<>
+								Add to Favorites <Plus />
+							</>
+						)}
+					</button>
+				</div>
 			</div>
 		</div>
 	)

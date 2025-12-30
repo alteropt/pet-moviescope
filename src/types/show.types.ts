@@ -11,5 +11,5 @@ export type Show = {
 	creators: string[]
 	ageRating: string
 	isFavorite: boolean
-	
+	description: string
 }

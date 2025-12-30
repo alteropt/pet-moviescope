@@ -21,8 +21,8 @@ export const sidebarLinksData: sidebarLinks = [
 				icon: <House />,
 			},
 			{
-				name: 'Watch List',
-				link: '/watchlist',
+				name: 'Favorites',
+				link: '/shows/favorites',
 				icon: <Heart />,
 			},
 			{

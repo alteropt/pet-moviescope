@@ -25,3 +25,19 @@ export const getComingSoonShows = async (): Promise<Show[]> => {
 	if (!res.ok) throw new Error('Failed to fetch coming soon shows')
 	return res.json()
 }
+
+export const getFavoritesShows = async (): Promise<Show[]> => {
+	const res = await fetch('/api/shows/favorites')
+	if (!res.ok) throw new Error('Failed to fetch favorite shows')
+	return res.json()
+}
+
+export const toggleShowFavorite = async (id: number) => {
+	const res = await fetch(`/api/shows/${id}/favorite/toggle`, {
+		method: 'PATCH',
+	})
+
+	if (!res.ok) throw new Error('Failed to toggle favorite')
+
+	return res.json()
+}
