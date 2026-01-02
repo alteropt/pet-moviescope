@@ -1,5 +1,8 @@
 import ShowsCategorySection from '../components/ShowsCategorySection'
-import { useComingSoonShows, useTrendingShows } from '../hooks/useShows'
+import {
+	useComingSoonShows,
+	useTrendingShows,
+} from '../hooks/useShows'
 
 const Homepage = () => {
 	const { data: trendingShows } = useTrendingShows()

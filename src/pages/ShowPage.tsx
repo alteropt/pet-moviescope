@@ -1,13 +1,28 @@
 import { Check, Plus } from 'lucide-react'
 import { useParams } from 'react-router'
+import { useLocalStorage } from '../hooks/useLocalStorage'
 import { useShow, useToggleFavorite } from '../hooks/useShows'
 import { getRatingClass } from '../utils/getRatingClass'
 
 const ShowPage = () => {
 	const { id } = useParams()
 	const { data: show, isLoading } = useShow(Number(id))
-
 	const toggleShowFavorite = useToggleFavorite()
+
+	const { setShows, getShows } = useLocalStorage()
+
+	function handleToggleFavorite() {
+		if (!show) return
+		toggleShowFavorite.mutate(show.id)
+
+		const currentShows = getShows()
+
+		const updatedShows = currentShows.map(s =>
+			s.id === show.id ? { ...s, isFavorite: !s.isFavorite } : s
+		)
+
+		setShows(updatedShows)
+	}
 
 	if (!id) return <div>Invalid show id</div>
 	if (isLoading) return <div>Loading...</div>
@@ -57,7 +72,7 @@ const ShowPage = () => {
 					</button>
 					<button
 						className='flex items-center gap-2 border border-(--text-color) cursor-pointer px-4 py-2 rounded-md'
-						onClick={() => toggleShowFavorite.mutate(show.id)}
+						onClick={handleToggleFavorite}
 					>
 						{show.isFavorite ? (
 							<>
