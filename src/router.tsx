@@ -4,6 +4,7 @@ import FavoriteShowsPage from './pages/FavoriteShowsPage'
 import Homepage from './pages/HomePage'
 import NotFoundPage from './pages/NotFoundPage'
 import ShowPage from './pages/ShowPage'
+import ShowsPage from './pages/ShowsPage'
 
 export const router = createBrowserRouter([
 	{
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
 			{
 				path: '/shows/favorites',
 				element: <FavoriteShowsPage />,
+			},
+			{
+				path: '/shows/all',
+				element: <ShowsPage />,
 			},
 			{
 				path: '*',
