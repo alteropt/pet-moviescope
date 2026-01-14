@@ -1,22 +1,11 @@
-import ShowsCategorySection from '../components/ShowsCategorySection'
-import {
-	useComingSoonShows,
-	useTrendingShows,
-} from '../hooks/useShows'
+import ShowsCategorySectionList from '../components/ShowsCategorySectionList/ShowsCategorySectionList'
 
-const Homepage = () => {
-	const { data: trendingShows } = useTrendingShows()
-	const { data: comingSoonShows } = useComingSoonShows()
-
+const HomePage = () => {
 	return (
 		<>
-			<ShowsCategorySection showsCategory='Trending' shows={trendingShows} />
-			<ShowsCategorySection
-				showsCategory='Coming Soon'
-				shows={comingSoonShows}
-			/>
+			<ShowsCategorySectionList />
 		</>
 	)
 }
 
-export default Homepage
+export default HomePage

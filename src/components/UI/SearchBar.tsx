@@ -4,7 +4,9 @@ import { useLocation, useNavigate } from 'react-router'
 
 const SearchBar = () => {
 	const location = useLocation()
-	const url = new URL('https://' + location.pathname + location.search)
+	const url = new URL(
+		'https://localhost:3000' + location.pathname + location.search
+	)
 	const searchQuery = url.searchParams.get('search')
 
 	const [search, setSearch] = useState(searchQuery ?? '')

@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router'
 import MainLayout from './layouts/MainLayout'
 import FavoriteShowsPage from './pages/FavoriteShowsPage'
-import Homepage from './pages/HomePage'
+import HomePage from './pages/HomePage'
 import NotFoundPage from './pages/NotFoundPage'
 import ShowPage from './pages/ShowPage'
 import ShowsPage from './pages/ShowsPage'
@@ -12,7 +12,7 @@ export const router = createBrowserRouter([
 		children: [
 			{
 				path: '/',
-				element: <Homepage />,
+				element: <HomePage />,
 			},
 			{
 				path: '/shows/:id',
