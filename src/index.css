@@ -1,15 +1,19 @@
 @import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-	--background-color: #0a0d10;
-	--text-color: #ffffff;
+	--background-color: #fffbeb;
+	--text-color: #0a0d10;
 	--accent-color: #d61a2f;
 	--secondary-color: #9c9d9d;
-	--tertiary-color: ;
+}
+
+.dark {
+	--background-color: #0a0d10;
+	--text-color: #ffffff;
 }
 
 body {
 	font-family: 'Mulish', sans-serif;
-	background-color: var(--background-color);
 	color: var(--text-color);
 }

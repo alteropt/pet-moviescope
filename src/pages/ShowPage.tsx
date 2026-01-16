@@ -18,7 +18,7 @@ const ShowPage = () => {
 		const currentShows = getShows()
 
 		const updatedShows = currentShows.map(s =>
-			s.id === show.id ? { ...s, isFavorite: !s.isFavorite } : s
+			s.id === show.id ? { ...s, isFavorite: !s.isFavorite } : s,
 		)
 
 		setShows(updatedShows)
@@ -67,11 +67,11 @@ const ShowPage = () => {
 				</div>
 
 				<div className='mt-8 flex gap-4'>
-					<button className='flex items-center gap-2 border border-(--text-color) cursor-pointer px-4 py-2 rounded-md'>
+					<button className='flex items-center gap-2 border border-white cursor-pointer px-4 py-2 rounded-md'>
 						Watch Now
 					</button>
 					<button
-						className='flex items-center gap-2 border border-(--text-color) cursor-pointer px-4 py-2 rounded-md'
+						className='flex items-center gap-2 border border-white cursor-pointer px-4 py-2 rounded-md'
 						onClick={handleToggleFavorite}
 					>
 						{show.isFavorite ? (

@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from 'react-router'
 const SearchBar = () => {
 	const location = useLocation()
 	const url = new URL(
-		'https://localhost:3000' + location.pathname + location.search
+		'https://localhost:3000' + location.pathname + location.search,
 	)
 	const searchQuery = url.searchParams.get('search')
 
@@ -31,7 +31,7 @@ const SearchBar = () => {
 				name='search'
 				id='search'
 				placeholder='Search here...'
-				className='outline-0 rounded-full border-[#9c9d9d40] border px-12 py-3 focus:border-(--text-color) transition-colors duration-300'
+				className='outline-0 rounded-full dark:border-[#9c9d9d40] border-(--secondary-color) border px-12 py-3 focus:border-(--text-color) transition-colors duration-300 placeholder:text-(--text-color)'
 				value={search}
 				onChange={e => setSearch(e.target.value)}
 			/>

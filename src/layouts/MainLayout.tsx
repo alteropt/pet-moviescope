@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar/Sidebar'
 
 const MainLayout = () => {
 	return (
-		<div className='min-h-screen flex'>
+		<div className='min-h-screen flex bg-(--background-color)'>
 			<Sidebar />
 
 			<div className='flex-1 flex flex-col overflow-hidden'>
